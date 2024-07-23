@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+ font-family: "Poppins", sans-serif;
+}
+.logo__width{
+    width: 160.53px;
+}
+.footer__logo__width{
+    width: 123px;
+}
+/* Add application styles & imports to this file! */
+body {
+    --bg-clr:#fff;
+    --text-color: #000000;
+    --bkg-color: #fff;
+    --toggle-color:#000;
+    --btn-txt-color: white;
+    --btn-bg-color: #016197;
+    --footer-bg: #f8fafc;
+    --hamburger-bg: #333;
+    --text-primary:#2563EB;
+    --footer-text:#52525B;
+    --btn-hover-color:#016097d1;
+    --pera-text-clr:#818A9C;
+    --sub-text-clr:#090914;
+    --checkbox-border:#000;
+    --checkbox-label-clr:#000000;
+    --checkbox-background-clr:#016197;
+    --input-bg: #fff;
+    --placeholder-clr: #818a9c;
+    --selctotion-clr: #818a9c;
+    --hover-btn:#ececec;
+    --active-clr:#016197;
+    --nav-link-hover-color: #016197;
+  }
+  body.dark-theme {
+    --bg-clr:#000000;
+    --text-color: #eee;
+    --toggle-color:#ffffff;
+    --bkg-color: #000000;
+    --btn-txt-color: rgb(46, 43, 43);
+    --btn-bg-color: rgb(255, 255, 255);
+    --footer-bg: #000000;
+    --hamburger-bg: #ffffff;
+    --text-primary:#ffffff;
+    --footer-text:#f1f1f1;
+    --btn-hover-color:#ffffffde;
+    --pera-text-clr:#ffffff;
+    --sub-text-clr:#ffffff;
+    --checkbox-border:#ffffff;
+    --checkbox-label-clr:#fff;
+    --checkbox-background-clr:#000000;
+    --input-bg:#000;
+    --placeholder-clr: #ececec;
+    --selctotion-clr: #ececec;
+    --hover-btn:#3f3f3f;
+    --active-clr:#0d87cb;
+    --nav-link-hover-color:#0d87cb;
+   
+  }
+  ::placeholder {
+    color: var(--placeholder-clr);
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12-18 */
+    color: var(--placeholder-clr);
+  }
+  
+  body {
+    background: var(--bkg-color);
+    transition: background-color 1s linear;
+  }
+  
+
+  p {
+    color: var(--pera-text-clr);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    transition: background-color 1s linear;
+  }
+  h1{
+    font-size: 64px;
+    color: var(--text-color);
+    transition: background-color 1s linear;
+  }
+  h2{
+    font-size: 37.85px;
+    color: #fff;
+    transition: background-color 1s linear;
+  }
+  h3{
+    font-size: 56px;
+    font-weight: 400;
+    color: var(--text-color);
+    transition: background-color 1s linear;
+  }
+  h4{
+    font-size: 43px;
+    font-weight: 400;
+    transition: background-color 1s linear;
+  }
+  .active{
+    color: var(--active-clr) !important;
+    transition: background-color 1s linear;
+  }
+  .find__btn{
+    border: 1.4px solid var(--checkbox-label-clr);
+    color: var(--checkbox-label-clr) !important;
+  }
+  .find__btn:hover{
+    border: 1.4px solid var(--checkbox-label-clr);
+    color: var(--checkbox-label-clr) !important;
+    background-color: var(--hover-btn) !important;
+  }
+  button.toggle__btn {
+    padding: 5px 9px;
+    border: 1.5px solid #4b4b4b;
+    border-radius: 100px; 
+    color: var(--toggle-color);
+    /* background-color: var(--btn-bg-color); */
+    font-size: 12px;
+    background: transparent;
+
+  }
+  
+  .nav-item a{
+    color: #0A071B;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+  .nav-item a{
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+.nav-link:focus, .nav-link:hover {
+  color: var(--nav-link-hover-color) !important;
+}
+
+.bg___gray{
+  background-color: var(--footer-bg);
+  padding: 5rem 0 1px;
+  transition: background-color 1s linear;
+}
+.section__gap{
+  margin-bottom: 132px;
+}
+.section__content p{
+  color: var(--text-color);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+
+/* responsive breckpoints start */
+@media (max-width: 575.98px) {
+  .logo__width {
+    width: 115.53px;
+  }
+  .burger-wrapper {
+    width: 19px !important;
+    height: 40px !important;
+  }
+  .burger-wrapper .hamburger {
+    width: 30px !important;
+    height: 3px !important;
+ }
+ .burger-wrapper .hamburger::before, .burger-wrapper .hamburger::after {
+  width: 30px !important;
+  height: 3px !important;
+}
+.burger-wrapper .hamburger:after {
+  top: 9px;
+}
+.burger-wrapper .hamburger:before {
+  top: -9px;
+}
+.padding__nav {
+  padding: 0.5rem 0 !important;
+}
+.mb__166 {
+  margin-bottom: 20px !important;
+}
+.section__gap {
+  margin-bottom: 60px;
+}
+}
+@media (min-width: 0px) and (max-width: 380.98px) { 
+  main {
+    margin-top: 6rem !important;
+}
+  h1{
+    font-size: 30px !important;
+}
+.carousel .change_outer .element {
+    font-size: 30px !important;
+}
+.carousel .change_outer{
+top: -20px !important;
+}
+.mobile__top{
+  margin-top: -30px;
+}
+.head__right svg{
+  width: 295px;
+  height: auto;
+}
+.text__content p {
+  width: 315px !important;
+}
+.select-box__input-text {
+  font-size: 12px !important;
+}
+.job__form input{
+  font-size: 12px !important;
+}
+.newsletter  h2{
+  font-size: 32.85px;
+}
+ }
+/* responsive breckpoints end */

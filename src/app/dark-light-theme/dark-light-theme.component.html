@@ -1,0 +1,24 @@
+<button (click)="toggleDarkTheme()" class="toggle__btn">
+    <svg *ngIf="!isDark" class="me-1" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8.48476" cy="8.51064" r="7.7051" fill="url(#paint0_linear_761_133)"/>
+        <defs>
+        <linearGradient id="paint0_linear_761_133" x1="0.779664" y1="0.805542" x2="16.1899" y2="12.2692" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#016197"/>
+        <stop offset="1" stop-color="#F3ABD2"/>
+        </linearGradient>
+        </defs>
+        </svg>
+    {{isDark?'Dark':'Light'}}
+    <svg *ngIf="isDark" class="me-1" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8.48476" cy="8.51064" r="7.7051" fill="url(#paint0_linear_761_133)"/>
+        <defs>
+        <linearGradient id="paint0_linear_761_133" x1="0.779664" y1="0.805542" x2="16.1899" y2="12.2692" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#016197"/>
+        <stop offset="1" stop-color="#F3ABD2"/>
+        </linearGradient>
+        </defs>
+        </svg>
+  
+</button>
+
+

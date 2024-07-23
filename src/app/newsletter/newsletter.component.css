@@ -1,0 +1,63 @@
+.newsletter{
+    background-color: #016197;
+    border-radius: 18px;
+    padding: 70px;
+    position: relative;
+    overflow: hidden;
+}
+.newsletter button{
+    color: #2563EB;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4.51px;
+    transition: .5s;
+}
+.newsletter button:hover{
+background-color: #ffffffd9 !important;
+}
+.footer__form input, button{
+width: 100%;
+height: 54.07px;
+padding: 15.32px 14.42px 15.32px 18.02px;
+gap: 11.72px;
+border-radius: 4.51px;
+opacity: 0px;
+
+}
+.footer__form input{
+background-color: #2563EB;
+color: #fff;
+}
+::placeholder{
+    color: #ffffffca;
+    font-size: 14px;
+}
+.newsletter::before{
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    border: 6px solid #f1f5f957;
+    top: -81px;
+    left: -88px;
+}
+.newsletter::after{
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    border: 6px solid #ffffffe0;
+    bottom: -110px;
+    right: -91px;
+}
+.mb__90{
+    margin-bottom: 90px;
+}
+
+/* responsive breckpoints start */
+@media (max-width: 767.98px) { 
+    .newsletter{padding: 30px !important;}
+    .newsletter button{margin-top: 15px;}
+ }

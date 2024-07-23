@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg border__bottom padding__nav fixed-top ">
+    <div class="container">
+   <div class="d-flex align-items-center gap-3 gap-lg-4">
+    <a class="navbar-brand" href="/">
+      <img *ngIf="!isDark" src="assets/images/logo-light.png" class="border__end logo__width" alt="cogniar">
+      <img *ngIf="isDark" src="assets/images/logo-dark.png" class="border__end logo__width" alt="cogniar">
+     </a>
+     <div>
+       <app-dark-light-theme ></app-dark-light-theme>
+      </div>  
+   </div>    
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       
+      <input class="menu-trigger hidden" id="togglenav" type="checkbox"/>
+      <label class="burger-wrapper" for="togglenav">
+        <div class="hamburger"></div>
+      </label>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-5 mx-auto gap-sm-3 mt-3 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" (click)="scrollToSection('services')"  [ngClass]="iswhichMenu=='Service'?'active':''">Services</a>
+          </li>
+      
+          <li class="nav-item">
+            <a class="nav-link" (click)="scrollToSection('about')"   [ngClass]="iswhichMenu=='About'?'active':''">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scrollToSection('careers')" [ngClass]="iswhichMenu=='Careers'?'active':''">Careers</a>
+          </li>
+      
+        </ul>
+       
+      </div>
+    </div>
+  </nav>
+
+
+  
