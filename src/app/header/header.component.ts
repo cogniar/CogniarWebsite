@@ -31,7 +31,7 @@ export class HeaderComponent {
     if (section == 'about')
       window.scrollTo({ top: 1400, behavior: 'smooth' });
     if (section == 'careers')
-      window.scrollTo({ top: 2600, behavior: 'smooth' });
+      window.scrollTo({ top: 2560, behavior: 'smooth' });
 
     //window.scrollTo({ top: 2600, behavior: 'smooth' });
     //this.commonService.setSection(section);
