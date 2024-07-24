@@ -23,6 +23,7 @@
     margin-bottom: 12px;
     display: block;
     transition: .5s;
+    cursor: pointer;
 }
 .footer__links li a:hover{
     color: #016197;

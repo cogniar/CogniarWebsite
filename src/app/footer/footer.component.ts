@@ -18,10 +18,17 @@ export class FooterComponent {
     return new Date().getFullYear();
     }
     isDark: boolean = false;
+    iswhichMenu: string = "";
     constructor(private commonService: commonservice) {
       this.commonService.isDark.subscribe((data) => {
         this.isDark = data;
       })
+      this.commonService.iswhichMenu.subscribe((data) => {
+        this.iswhichMenu = data;
+      })
     }
-  
+    
+    scrollToSection(section: any) {
+      this.commonService.setSection(section);
+    }
 }
