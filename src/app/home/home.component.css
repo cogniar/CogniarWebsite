@@ -5,19 +5,9 @@
 .frame {
     width: 100%;
     height: 100%;
-    /* overflow: hidden;
-    background: #2D64D2;
-    background: linear-gradient(to right, #2D64D2 16%, #BD4C1C 79%); */
   }
   
-  /* .center {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin-top: -37.5px;
-  } */
-  
+
   .carousel {
     position: relative;
     width: 100%;
@@ -29,13 +19,11 @@
   .carousel .pre {
     position: absolute;
     top: 0;
-    /* right: 54.5%; */
     height: 75px;
   }
   .carousel .change_outer {
     position: absolute;
     top: 0;
-    /* left: 46%; */
     text-align: left;
     height: 75px;
     overflow: hidden;
@@ -90,13 +78,7 @@
       transform: translateY(-300px);
     }
   }
-/* .flip4 li{
-background: #2D64D2;
-background: linear-gradient(to right, #2D64D2 16%, #BD4C1C 79%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
 
-} */
 h1{
     font-weight: 400;
 }
