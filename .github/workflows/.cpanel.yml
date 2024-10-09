@@ -1,0 +1,67 @@
+name: Azure Static Web Apps CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+
+jobs:
+  build_and_deploy_job:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          lfs: false
+
+      - name: Verify initial Node.js version
+        run: node -v
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.19.0'
+          cache: 'npm'
+
+      - name: Verify Node.js version after setup
+        run: node -v
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the app
+        run: npm run build
+
+      - name: Build And Deploy
+        id: builddeploy
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{ secrets.GODADDY_SSH_HOST }}
+          username: ${{ secrets.GODADDY_SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22 # Default SSH port, can be changed if necessary
+          script: |
+            cd /path/to/your/public_html # Navigate to the directory in GoDaddy
+            rm -rf * # Clear old files
+            scp -r dist/cogniar/browser/* . # Copy over the new built files
+            # You can add more commands as per your deployment need
+
+  close_pull_request_job:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    name: Close Pull Request Job
+    steps:
+      - name: Close Pull Request
+        id: closepullrequest
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{ secrets.GODADDY_SSH_HOST }}
+          username: ${{ secrets.GODADDY_SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: echo "Closing pull request"
