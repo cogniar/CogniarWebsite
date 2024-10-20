@@ -47,7 +47,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22 # Default SSH port, can be changed if necessary
           script: |
-            cd /path/to/your/public_html # Navigate to the directory in GoDaddy
+            cd /home/ggffwnm5hvm/public_html # Navigate to the directory in GoDaddy
             rm -rf * # Clear old files
             scp -r dist/cogniar/browser/* . # Copy over the new built files
             # You can add more commands as per your deployment need
