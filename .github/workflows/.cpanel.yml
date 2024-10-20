@@ -60,6 +60,7 @@ jobs:
         run: |
           scp -r dist/cogniar/browser/*:/home/ggffwnm5hvm/public_html/
 
+          
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
