@@ -50,7 +50,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            mkdir -p /home/ggffwnm5hvm/public_html # Ensure directory exists
             cd /home/ggffwnm5hvm/public_html
             rm -rf * # Clear old files
             # Use rsync or scp from runner to target server
