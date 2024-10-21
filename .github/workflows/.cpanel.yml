@@ -54,7 +54,6 @@ jobs:
             # rm -rf * # Clear old files
             # Use rsync or scp from runner to target server
             exit
-
       - name: Upload Files to GoDaddy
         run: |
           scp -r dist/cogniar/browser/* ${{ secrets.GODADDY_SSH_USERNAME }}@${{ secrets.GODADDY_SSH_HOST }}:/home/ggffwnm5hvm/public_html/
