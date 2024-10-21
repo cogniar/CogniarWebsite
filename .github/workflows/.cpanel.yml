@@ -53,6 +53,7 @@ jobs:
             cd /home/ggffwnm5hvm/public_html
             # rm -rf * # Clear old files
             # Use rsync or scp from runner to target server
+          
             exit
 
       - name: Upload Files to GoDaddy
