@@ -59,7 +59,6 @@ jobs:
         run: |
           scp -r dist/cogniar/browser/* ${{ secrets.GODADDY_SSH_USERNAME }}@${{ secrets.GODADDY_SSH_HOST }}:/home/ggffwnm5hvm/public_html/
 
-
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
