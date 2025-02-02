@@ -1,0 +1,10 @@
+/* dark-theme.css */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.dark-theme .some-element {
+    border-color: #444;
+  }
+  
